@@ -25,7 +25,6 @@ return (
         <>
           
           <div className="button-container">
-            <button onClick={showRandomCard}>Random Car</button>
             <button onClick={showPreviousCard}>Previous Car</button>
             <button onClick={showNextCard}>Next Car</button>
           </div>

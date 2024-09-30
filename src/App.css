@@ -1,6 +1,10 @@
 body {
   font-family: "Spicy Rice", serif;
-  background-color: black;
+  background-image: ('/backgroundimage.avif'); 
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-attachment: fixed; /* Keep the image fixed when scrolling */
+  color: black;
 }
 
 h1 {
@@ -30,33 +34,8 @@ p {
 }
  
 
-.flashcard {
-  border: 1px solid #ccc; /* Border around the card */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Space inside the card */
-  margin: 10px auto; /* Center the card with some spacing */
-  width: 200px; /* Width of the card */
-  text-align: center; /* Center the text */
-  cursor: pointer; /* Pointer cursor on hover */
-}
-.flashcard-enter {
-  transform: scale(0);
-}
-
-.flashcard-enter-active {
-  transform: scale(1);
-}
-
-.flashcard-exit {
-  transform: scale(1);
-}
-
-.flashcard-exit-active {
-  transform: scale(0);
-}
-
 .coupe-card {
-  background-color: teal; /* Different background for Coupe */
+  background-color: teal; 
   border: 2px solid black; /* Border around the card */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Padding inside the card */
