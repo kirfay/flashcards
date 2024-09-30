@@ -1,35 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
+
+import FlashcardSet from "./components/FlashcardSet"; 
+
+const carCards = [
+  { question: 'What type of car is this?', answer: 'Make: Lamborghini, Model: Mustang, Year: 2020, Type: Coupe',image: 'https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/augmented-reality/revuelto/ar_revuelto.png'},
+  { question: 'What type of car is this?', answer: 'Make: Tesla, Model: S, Year: 2021, Type: Sedan', image: 'https://cdn.euroncap.com/media/72827/tesla-model-s.png' }
+  // Add more cards
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h1>Car Quiz</h1>
+      <p className="description">See how much you know about cars</p>
+      <FlashcardSet cards={carCards} />
+    </div>
+  );
 }
 
-export default App
+export default App;

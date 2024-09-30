@@ -1,42 +1,127 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  font-family: "Spicy Rice", serif;
+  background-color: black;
+}
+
+h1 {
+  color: #333;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+div {
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  color: #333;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.description {
+  font-size: 16px;  /* Adjust the font size */
+  color: #555;      /* Change the text color */
+  margin-top: 8px; /* Space between title and description */
+}
+ 
+
+.flashcard {
+  border: 1px solid #ccc; /* Border around the card */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Space inside the card */
+  margin: 10px auto; /* Center the card with some spacing */
+  width: 200px; /* Width of the card */
+  text-align: center; /* Center the text */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+.flashcard-enter {
+  transform: scale(0);
 }
 
-.card {
-  padding: 2em;
+.flashcard-enter-active {
+  transform: scale(1);
 }
 
-.read-the-docs {
-  color: #888;
+.flashcard-exit {
+  transform: scale(1);
+}
+
+.flashcard-exit-active {
+  transform: scale(0);
+}
+
+.coupe-card {
+  background-color: teal; /* Different background for Coupe */
+  border: 2px solid black; /* Border around the card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  text-align: center; /* Center the text */
+  color: black;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin: 20px auto; /* Center the card */
+  width: 300px; /* Fixed width for the card */
+}  
+
+
+.sedan-card {
+  background-color: beige; /* Different background for Sedan */
+  border: 2px solid black; /* Border around the card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  text-align: center; /* Center the text */
+  color: black;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin: 20px auto; /* Center the card */
+  width: 300px; /* Fixed width for the card */
+}  
+
+
+.card-content {
+  transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.total-cards-button {
+  background-color: teal; /* Same background color */
+  color: white; /* Same text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Match the padding */
+  margin: 5px auto; /* Center the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  display: block; /* Make sure it's block-level for centering */
+}
+
+
+.button-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the buttons */
+  margin-top: 15px; /* Space above the buttons */
+}
+
+.button-container button {
+  background-color: teal; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for the buttons */
+  margin: 0 10px; /* Space between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button-container button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.car-image {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: add rounded corners */
+  margin-bottom: 10px; /* Space between image and text */
 }
