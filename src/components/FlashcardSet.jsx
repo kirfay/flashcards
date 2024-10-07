@@ -27,6 +27,13 @@ const showPreviousCard = () => {
     setShowAnswer(false);
     setFeedback('');
 };
+
+const shuffleCards = () => {
+  const shuffled = [...shuffledCards].sort(() => Math.random() - 0.5);
+  setShuffledCards(shuffled);
+  setCurrentCardIndex(0); // Reset to the first card in the shuffled deck
+};
+
 const handleGuess = () => {
   const currentCard = cards[currentCardIndex];
   if (userGuess.trim().toLowerCase() === currentCard.answer.toLowerCase()) {
@@ -50,19 +57,26 @@ return (
           <div className="flashcard">
             <Flashcard card={cards[currentCardIndex]} />
           </div>
+          
           <input 
             type="text" 
+            className="guess-input"
             value={userGuess} 
             onChange={(e) => setUserGuess(e.target.value)} 
-            placeholder="Your guess"
+            placeholder="Enter your guess here"
           />
-          <button onClick={handleGuess}>Submit Guess</button>
+          <button className="submit-guess-button" onClick={handleGuess}>
+          Submit Guess</button>
 
+          
           <p className="feedback">{feedback}</p>
+          <button className="shuffle-button" onClick={shuffleCards}>Shuffle</button>
 
           <button className="total-cards-button">
             Total Cards: {cards.length}
           </button>
+          
+
         </>
       ) : (
         <p>No cards available</p>

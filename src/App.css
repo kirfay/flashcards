@@ -104,3 +104,56 @@ p {
   border-radius: 5px; /* Optional: add rounded corners */
   margin-bottom: 10px; /* Space between image and text */
 }
+
+input {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.submit-guess-button {
+  background-color: #ff9800; /* Orange background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-top: 10px; /* Space above the button */
+  display: block; /* Make the button block-level */
+  margin-left: auto; /* Center the button */
+  margin-right: auto; /* Center the button */
+}
+
+.submit-guess-button:hover {
+  background-color: #e68900; /* Darker shade on hover */
+}
+.guess-input {
+  display: block; /* Makes the input behave as a block element */
+  margin: 15px auto; /* Centers the input box horizontally */
+  padding: 10px; /* Adds space inside the input */
+  border: 2px solid #ccc; /* Adds a border */
+  border-radius: 5px; /* Rounds the corners */
+  width: 80%; /* Sets the width to 80% of the container */
+  max-width: 400px;
+}
+
+.shuffle-button{
+  background-color: teal;
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-top: 10px; /* Space above the button */
+  display: block; /* Make the button block-level */
+  margin-left: auto; /* Center the button */
+  margin-right: auto; /* Center the button */
+}
